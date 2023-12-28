@@ -1,1 +1,21 @@
-ggvhjg
+var userAge = prompt("Скільки тобі років:");
+if (!isNaN(userAge) && userAge >= 0) {
+    var yearsCount;
+
+    if (userAge == 1){
+        yearsCount = "рік";
+    }
+    else if (userAge >= 2 && userAge <= 4) {
+        yearsCount = "роки";
+    }
+    else {
+        yearsCount = "років";
+    }
+    console.log(userAge + " " + yearsCount);
+
+}
+else { 
+    console.log("Будь-ласка, введіть додатнє число");
+
+
+}
