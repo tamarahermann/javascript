@@ -3,9 +3,7 @@
 // Кілометри в метри
 // Години в хвилини
 // Кілограми в грами
-// Зробити вивід отриманої інформації у вигляді - 10 км це 10000м. 
-// 1 год це 60хв. 
-// 1 кг це 1000гр. 
+// Зробити вивід отриманої інформації у вигляді - 10 км це 10000м.  1 год це 60хв.  1 кг це 1000гр. 
 
 // Умови виконання ДЗ:
 // В задачі не обов'язково викорисутовувати prompt, просто запишіть значення в змінні.
@@ -15,3 +13,27 @@
 
 
 
+function convertUnits(unit, value) {
+    let result;
+    switch(unit.toLowerCase()){
+      case 'км':
+          result = value * 1000;
+          break;
+          case 'год':
+              result = value * 60;
+              break;
+              case 'кг':
+          result = value * 1000;
+          break;
+          default:
+          console.log('Ви ввели невідому одиницю виміру');
+          result=NaN;
+          break;
+}  
+          console.log(result);
+}
+
+convertUnits('км', 10);
+convertUnits('год',1);
+convertUnits('кг', 1);
+convertUnits('л', 5);
