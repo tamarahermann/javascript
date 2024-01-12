@@ -50,6 +50,7 @@ else {
 Якщо при виклику коду замінити true на false (тобто const result = pad ('qwerty', '+', 6, false)), то в консолі отримаємо qwerty++
 
 
+
 ﻿ДЗ 3 : Перевірка теорії ймовірності. Напишіть функцію, яка буде генерувати певну кількість випадкових чисел в діапазоні від 100 до 1000 включно. 
 Порахувати кількість парних та непарних серед них. Обчислити відсоткове співвідношення - чи буде воно близьке до 50%50? Приклад функції checkProbabilityTheory(count). 
 Парметр count буде вказувати, скільки разів буде генеруватися випадкове число.
@@ -62,8 +63,30 @@ else {
 Не використовувати функції або інші матеріали, які ми не вивчали. Намагайтесь робити ДЗ самостійно та не дивитися підказки.
 
 Рішення :
+(щодо рішення цієї задачі не дуже впевнена, бо числові значення чомусь не мінялися саме в числа при запуску коду, 
+хоча мені здається, що логіка виконання мала би бути вірна, прокоментуйте будь-ласка, де є упущення чи помилка з мого боку, бо довго ломала голову саме над цією задачею):
 
+function checkTheory (count) {
+    let totalNumbers = 0;
+    let evenNumbers = 0; 
+    let oddNumbers = 0;
+    for (let i=0; i < count; i++){
+        const randomNum =
+        Math.floor (Math.random () * (1000-100+1)) +100;
+        totalNumbers++;
+        if (randomNumber % 2 == 0) {
+            evenNumbers++;
+        } else {
+            oddNumbers++;
+        }
+        }
+        const percentageEven = (evenNumbers / totalNumbers) * 100;
+        const percentageOdd = (oddNumbers / totalNumbers) * 100;
 
+console.log ('Кількість згенерованих чисел: ' + totalNumbers);
+console.log ('Парних чисел:' + evenNumbers);
+console.log ('Не парних чисел:' + oddNumbers);
+console.log ('Відсоток парних до не парних:' + percentageEven : percentageOdd); 
 
-
+}
 
